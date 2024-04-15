@@ -1,0 +1,145 @@
+@import "../../Styles/Global.scss";
+
+header {
+  z-index: 999;
+  position: fixed;
+  height: 64px;
+  display: flex;
+  width: 100%;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  .mobile-left-div {
+    display: none;
+  }
+
+  .Header-mobile-logo-a {
+    display: none;
+  }
+
+  .desktop-left-div {
+    margin-left: 127px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    width: 50%;
+
+    .Header-desktop-logos {
+      display: flex;
+      align-items: center;
+      margin-right: 32px;
+      .Header-desktop-logo {
+        margin-right: 15px;
+      }
+    }
+
+    .chefs-p,
+    .restaurants-p {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      p {
+        margin-right: 32px;
+        color: black;
+        font-family: $global-font-family;
+        font-size: 18px;
+        font-weight: 200;
+      }
+    }
+  }
+
+  .right-div {
+    margin-right: 127px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    .searchLogo,
+    .cartLogo {
+      margin-left: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+    }
+
+    .profileLogo-a {
+      margin-left: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .searchLogo-a,
+    .profileLogo-a,
+    .cartLogo-a {
+      margin-left: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  @media (max-width: $mobile-pixel-display) {
+
+    height: 46px;
+
+    .Header-mobile-logo-a {
+      display: flex;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 32px;
+      height: 32px;
+    }
+
+    .desktop-left-div {
+      display: none;
+    }
+
+    .mobile-left-div {
+      margin-left: 20px;
+      width: 50%;
+      display: flex;
+      justify-content: baseline;
+      align-items: center;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .right-div {
+      margin-right: 20px;
+
+      .searchLogo,
+      .cartLogo {
+        width: 20px;
+        height: 20px;
+      }
+
+      .profileLogo-a {
+        margin-left: 20px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
