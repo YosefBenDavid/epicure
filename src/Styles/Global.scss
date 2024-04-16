@@ -10,5 +10,22 @@ $global-font-family: "Helvetica Neue";
   letter-spacing: 1.9700000286102295px;
 };
 
+%section-title-desktop {
+  text-align: center;
+  color: black;
+  font-family: $global-font-family;
+  font-size: 30px;
+  font-weight: 200;
+  letter-spacing: 1.25px;
+  margin-bottom: 40px;
+}
+
+%section-title-mobile {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 24px;
+  letter-spacing: 1.25px;
+  margin-bottom: 17px;
+}
 
 

@@ -5,7 +5,7 @@ import searchLogo from "../../Assets/searchLogo.svg";
 
 const HPBanner = () => {
   return (
-    <div className="banner-continer">
+    <section className="banner-continer">
       {/* <img className="banner-img" src={banner} alt="banner" /> */}
       <div className="banner-middle-div">
         <div className="middle-div-text">
@@ -25,7 +25,7 @@ const HPBanner = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

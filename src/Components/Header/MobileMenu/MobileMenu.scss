@@ -1,0 +1,57 @@
+@import "../../../Styles/Global.scss";
+
+.mobile-menu {
+  z-index: 99;
+  position: absolute;
+  background-color: white;
+  //   top: 35px; // I like it with this on better.
+  top: 0;
+  width: 100vw;
+  left: 0;
+  box-shadow: 2px 4px 10px 0px #afafaf40;
+  opacity: 0; /* Initially hide the menu */
+  visibility: hidden; /* Initially hide the menu */
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Transition for fade effect */
+
+  &.open {
+    opacity: 1; /* Show the menu when the open class is applied */
+    visibility: visible; /* Show the menu when the open class is applied */
+    transition: opacity 0.3s ease, visibility 0s linear; /* Transition for fade effect */
+  }
+
+  .close-menu {
+    margin-top: 11px;
+    margin-left: 20px;
+
+    .Header-mobile-menu {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .menu-top {
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  .menu-top,
+  .menu-bottom {
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 40px 20px;
+        list-style-type: none;
+        color: black;
+        font-family: $global-font-family;
+        font-size: 18px;
+        font-weight: 200;
+        letter-spacing: 1.9199999570846558px;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+}

@@ -4,46 +4,37 @@ import "./MobileMenu.scss";
 import { Link } from "react-router-dom";
 
 interface MobileMenuProps {
-  closeMenu: () => void;
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
+const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   return (
-    <div className="mobile-menu">
+    <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
       <div className="close-menu">
-        <img
-          onClick={closeMenu}
-          className="Header-mobile-menu"
-          src={close}
-          alt="mobile-menu"
-        />
+        <img className="Header-mobile-menu" onClick={onClose} src={close} alt="mobile-menu" />
       </div>
-      <div>
+      <div className="menu-top">
         <ul>
-          {/* todo add restaurants page */}
-          <Link to="/">
-            <li>Restaurants</li>
-          </Link>
-          {/* todo add Chefs page */}
-          <Link to="/">
-            <li>Chefs</li>
-          </Link>
+          <li>
+            <Link to="/">Restaurants</Link>
+          </li>
+          <li>
+            <Link to="/">Chefs</Link>
+          </li>
         </ul>
       </div>
-      <div>
+      <div className="menu-bottom">
         <ul>
-          {/* todo add Contact Us page */}
-          <Link to="/">
-            <li>Contact Us</li>
-          </Link>
-          {/* todo add Term of Use page */}
-          <Link to="/">
-            <li>Term of Use</li>
-          </Link>
-          {/* todo add Privacy Policy page */}
-          <Link to="/">
-            <li>Privacy Policy</li>
-          </Link>
+          <li>
+            <Link to="/">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="/">Term of Use</Link>
+          </li>
+          <li>
+            <Link to="/">Privacy Policy</Link>
+          </li>
         </ul>
       </div>
     </div>

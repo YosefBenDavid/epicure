@@ -10,10 +10,10 @@ import { Link } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
-  const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
-    setShowMenu(true);
+    setMenuOpen(!menuOpen); // Toggle menu state
   };
 
   return (
@@ -47,7 +47,7 @@ const Header = () => {
           alt="mobile-menu"
           onClick={handleMenuClick}
         />
-        {showMenu && <MobileMenu closeMenu={() => setShowMenu(false)} />}
+        <MobileMenu onClose={handleMenuClick} isOpen={menuOpen} />
       </div>
 
       <Link to="/" className="Header-mobile-logo-a">
