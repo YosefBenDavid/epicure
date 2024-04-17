@@ -15,7 +15,7 @@ const PopularRestaurants: React.FC<PopularRestaurantsProps> = ({ dishes }) => {
       <Swiper spaceBetween={24} slidesPerView={1.3}>
         {dishes.map((dish, index) => (
           <SwiperSlide key={index} className="dish-slide">
-            <DishCard dish={dish} index={index} />
+            <DishCard dish={dish} key={index} />
           </SwiperSlide>
         ))}
       </Swiper>

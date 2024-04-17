@@ -3,10 +3,11 @@ import { Dish } from "../../Utilities/Utilities";
 import "./DishCard.scss";
 import star from "../../Assets/Star.svg";
 import emptyStar from "../../Assets/emptyStar.svg";
+import nis from "../../Assets/Icons/nis.svg";
+import line from "../../Assets/line.svg";
 
-interface PopularRestaurantsProps {
+interface DishCardProps {
   dish: Dish;
-  index: number;
 }
 
 const renderStars = (stars: number) => {
@@ -26,30 +27,43 @@ const renderStars = (stars: number) => {
   return [...filledStars, ...emptyStars];
 };
 
-const DishCard: React.FC<PopularRestaurantsProps> = ({ dish, index }) => {
+const DishCard: React.FC<DishCardProps> = ({ dish }) => {
   return (
-    <div key={index} className="dish-card">
+    <div className="dish-card" key={dish.name}>
       {dish.image && (
         <img src={dish.image} alt={dish.name} className="dish-image" />
       )}
-      {dish.name && <h2 className="dish-name">{dish.name}</h2>}
-      {dish.chef && <p className="dish-chef">{dish.chef}</p>}
-      {dish.ingredients.length > 0 && (
-        <ul className="dish-ingredients">
-          {dish.ingredients.map((ingredient, i) => (
-            <li key={i} className="ingredient">
-              {ingredient}
-            </li>
-          ))}
-        </ul>
-      )}
-      {dish.logo && <img src={dish.logo} alt="logo" className="chef-logo" />}
-      {dish.price > -1 && (
-        <p className="dish-price">Price: ${dish.price.toFixed(2)}</p>
-      )}
-      {dish.stars > -1 && (
-        <div className="dish-stars">{renderStars(dish.stars)}</div>
-      )}
+      <div className="dish-props">
+        {dish.name && <h2 className="dish-name">{dish.name}</h2>}
+        {dish.chef && <p className="dish-chef">{dish.chef}</p>}
+        <div className="typeNingredients">
+          {dish.logo && (
+            <img src={dish.logo} alt="logo" className="type-logo" />
+          )}
+          {dish.ingredients.length > 0 && (
+            <div className="dish-ingredients">
+              {dish.ingredients.map((ingredient, i) => (
+                <span key={i} className="ingredient">
+                  {ingredient}, <span> </span>
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+        {dish.stars > -1 && (
+          <div className="dish-stars">{renderStars(dish.stars)}</div>
+        )}
+        {dish.price > -1 && (
+          <div className="dish-price">
+            <img src={line} alt="nis" />
+            <p>
+              <img src={nis} className="nis" alt="nis" />
+              {dish.price.toFixed(2)}
+            </p>
+            <img src={line} alt="nis" />
+          </div>
+        )}
+      </div>
     </div>
   );
 };

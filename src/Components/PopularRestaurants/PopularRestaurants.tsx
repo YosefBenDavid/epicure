@@ -1,3 +1,4 @@
+import React from "react";
 import Swiper from "../Swiper/Swiper";
 import "swiper/css";
 import "./PopularRestaurants.scss";
@@ -14,12 +15,12 @@ const PopularRestaurants = () => {
       ) : (
         <div className="non-swiper-content">
           {Dishes.map((dish, index) => (
-            <DishCard dish={dish} index={index} />
+            <DishCard dish={dish} key={index} />
           ))}
         </div>
       )}
       <div className="all-restaurants">
-        All restaurants
+        <p>All restaurants</p>
         <img src={rightArrow} alt="arrow" />
       </div>
     </section>
