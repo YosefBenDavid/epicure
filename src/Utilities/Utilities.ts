@@ -7,3 +7,8 @@ export interface Dish {
   price: number;
   stars: number;
 }
+
+export interface Icon {
+  image: string;
+  name: string;
+}

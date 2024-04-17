@@ -1,0 +1,67 @@
+@import "../../Styles/Global.scss";
+
+.icon-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  width: 100%;
+  margin-top: 80px;
+  padding: 35px 0;
+
+  .icon-section-title {
+    @extend %section-title-desktop;
+  }
+
+  .icon-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .icon-block {
+      width: 136px;
+      height: 127px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 20px;
+
+      img {
+        width: 75px;
+        height: 60px;
+      }
+      p {
+        font-family: $global-font-family;
+        font-size: 24px;
+        font-weight: 200;
+        letter-spacing: 1.9700000286102295px;
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+
+  @media (max-width: $mobile-pixel-display) {
+    margin-top: 46px;
+    padding: 35px 0 0 0;
+    .icon-section-title {
+      font-family: $global-font-family;
+      font-size: 18px;
+      font-weight: 200;
+      letter-spacing: 1.25px;
+      margin-bottom: 30px;
+    }
+    .icon-map {
+      flex-direction: column;
+      justify-content: space-between;
+
+      .icon-block {
+        margin: 28px 0px 28px 0;
+      }
+    }
+  }
+}
