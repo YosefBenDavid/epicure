@@ -10,18 +10,20 @@ const PopularRestaurants = () => {
   return (
     <section className="popular-container">
       <div className="popular-title">POPULAR RESTAURANTS IN EPICURE:</div>
-      {window.innerWidth <= 700 ? (
-        <Swiper dishes={Dishes} />
-      ) : (
-        <div className="non-swiper-content">
-          {Dishes.map((dish, index) => (
-            <DishCard dish={dish} key={index} />
-          ))}
+      <div className="fit-content">
+        {window.innerWidth <= 700 ? (
+          <Swiper dishes={Dishes} />
+        ) : (
+          <div className="non-swiper-content">
+            {Dishes.map((dish, index) => (
+              <DishCard dish={dish} key={index} />
+            ))}
+          </div>
+        )}
+        <div className="all-restaurants">
+          <p>All restaurants</p>
+          <img src={rightArrow} alt="arrow" />
         </div>
-      )}
-      <div className="all-restaurants">
-        <p>All restaurants</p>
-        <img src={rightArrow} alt="arrow" />
       </div>
     </section>
   );
