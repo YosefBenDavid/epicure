@@ -34,7 +34,7 @@ const DishCard: React.FC<DishCardProps> = ({ dish }) => {
         <img src={dish.image} alt={dish.name} className="dish-image" />
       )}
       <div className="dish-props">
-        {dish.name && <h2 className="dish-name">{dish.name}</h2>}
+        {dish.name && <div className="dish-name">{dish.name}</div>}
         {dish.chef && <p className="dish-chef">{dish.chef}</p>}
         <div className="typeNingredients">
           {dish.logo && (

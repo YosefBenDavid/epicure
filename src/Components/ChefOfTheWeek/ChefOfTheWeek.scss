@@ -1,0 +1,142 @@
+@import "../../Styles/Global.scss";
+
+.ChefOfTheWeek-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 129px;
+
+  .chef-title {
+    @extend %section-title-desktop;
+  }
+
+  .bio {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+
+    img {
+      width: 478px;
+      height: auto;
+    }
+    .id {
+      position: relative;
+      width: fit-content;
+      .name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 78px;
+        background-color: #ffffffcc;
+        width: 100%;
+        bottom: 4px;
+        margin: 0;
+        position: absolute;
+        font-family: $global-font-family;
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: 2.6700000762939453px;
+      }
+    }
+    .about {
+      padding: 12px 0 0 60px;
+      width: 642px;
+      font-family: $global-font-family;
+      font-size: 24px;
+      font-weight: 200;
+      letter-spacing: 1.25px;
+      text-align: justify;
+    }
+  }
+
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 100%;
+
+    .title {
+      font-family: $global-font-family;
+      font-size: 30px;
+      font-weight: 200;
+      letter-spacing: 1.25px;
+      margin-bottom: 40px;
+    }
+    .res-map {
+      .non-swiper-content {
+        display: flex;
+
+        .dish-card {
+          margin: 0 12px 0 0;
+
+          .dish-props {
+            padding: 0;
+            max-width: 231px;
+
+            .dish-name {
+              font-size: 30px;
+              font-weight: 400;
+              letter-spacing: 2.6700000762939453px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile-pixel-display) {
+    margin: 48px 0px;
+    width: unset;
+    .dish-card {
+        min-height: 385px;
+    }
+    .chef-title {
+      width: 100%;
+    }
+
+    .bio {
+      margin: 0px 20px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: unset;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .about {
+        padding: 0;
+        width: fit-content;
+        font-size: 18px;
+        font-weight: 200;
+        letter-spacing: 1.25px;
+      }
+      .id {
+        width: 100%;
+      }
+    }
+
+    .restaurants {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: baseline;
+    //   width: 100%;
+        margin-top: 20px;
+      margin-left: 40px;
+
+      .title {
+        // font-family: $global-font-family;
+        font-size: 16px;
+        font-weight: 200;
+        letter-spacing: 1.25px;
+        margin-bottom: 16px;
+      }
+
+      .res-map {
+        
+      }
+    }
+  }
+}
