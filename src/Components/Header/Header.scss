@@ -9,7 +9,7 @@ header {
   background-color: white;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+
 
   .mobile-left-div {
     display: none;
@@ -95,7 +95,7 @@ header {
   }
 
   @media (max-width: $mobile-pixel-display) {
-
+    position: relative;
     height: 46px;
 
     .Header-mobile-logo-a {

@@ -90,10 +90,10 @@
     margin: 48px 0px;
     width: unset;
     .dish-card {
-        min-height: 385px;
+      min-height: 385px;
     }
     .chef-title {
-      width: 100%;
+      // width: 100%;
     }
 
     .bio {
@@ -119,24 +119,21 @@
     }
 
     .restaurants {
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: baseline;
-    //   width: 100%;
-        margin-top: 20px;
-      margin-left: 40px;
+      margin-top: 20px;
+      // padding-left: 40px;
+      // padding-right: 10px;
 
       .title {
-        // font-family: $global-font-family;
         font-size: 16px;
         font-weight: 200;
         letter-spacing: 1.25px;
         margin-bottom: 16px;
+        padding-left: 20px;
       }
+    .swiper-container {
+      padding-left: 20px;
+    }
 
-      .res-map {
-        
-      }
     }
   }
 }

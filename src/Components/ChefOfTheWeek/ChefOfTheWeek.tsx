@@ -5,7 +5,7 @@ import Swiper from "../Swiper/Swiper.tsx";
 import DishCard from "../DishCard/DishCard.tsx";
 
 const ChefOfTheWeek = () => {
-  const firstName = chef.name.split(" ")[0];
+  const firstName = chef.name.split(" ")[0].toUpperCase();
 
   return (
     <section className="ChefOfTheWeek-container">
@@ -20,9 +20,8 @@ const ChefOfTheWeek = () => {
       </div>
 
       <div className="restaurants">
-        <div className="title">{firstName}'s Restaurants</div>
-        <div className="res-map">
-          {window.innerWidth <= 700 ? (
+        <div className="title">{firstName}'S RESTAURANTS</div>
+        {window.innerWidth <= 700 ? (
             <Swiper dishes={chef.restaurants} />
           ) : (
             <div className="non-swiper-content">
@@ -31,7 +30,6 @@ const ChefOfTheWeek = () => {
               ))}
             </div>
           )}
-        </div>
       </div>
     </section>
   );
