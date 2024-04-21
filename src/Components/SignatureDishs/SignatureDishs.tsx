@@ -3,12 +3,16 @@ import { SignatureDishes } from "./SignatureDishs.ts";
 import Swiper from "../Swiper/Swiper.tsx";
 import DishCard from "../DishCard/DishCard.tsx";
 import "./SignatureDishs.scss"
+import useWindowWidth from '../../CustomHooks/useWindowWidth.tsx';
 
 const SignatureDishs = () => {
+
+  const windowWidth = useWindowWidth();
+
   return (
     <section className="signature-container">
       <div className="signature-title">SIGNATURE DISH OF:</div>
-      {window.innerWidth <= 700 ? (
+      {windowWidth <= 700 ? (
         <Swiper dishes={SignatureDishes} />
       ) : (
         <div className="non-swiper-content">

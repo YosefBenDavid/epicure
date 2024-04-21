@@ -8,13 +8,13 @@ import ChefOfTheWeek from "../Components/ChefOfTheWeek/ChefOfTheWeek.tsx";
 const HomePage = () => {
 
     return (
-        <div>
+        <>
         <HPBanner />
         <PopularRestaurants />
         <SignatureDishs />
         <IconDictionary />
         <ChefOfTheWeek />
-        </div>
+        </>
     )
 }
 

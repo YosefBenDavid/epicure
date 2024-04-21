@@ -1,0 +1,23 @@
+@import "../../Styles/Global.scss";
+
+.menu-bottom {
+    background-color: white;
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 40px 20px;
+      list-style-type: none;
+      color: black;
+      font-family: $global-font-family;
+      font-size: 18px;
+      font-weight: 200;
+      letter-spacing: 1.9199999570846558px;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}

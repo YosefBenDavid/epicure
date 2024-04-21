@@ -12,13 +12,9 @@
   padding: 0 0px 12px 0px;
   margin: 12px;
 
-  .dish-image {
-
-  }
-
   .dish-props {
     height: 100%;
-    padding: 0 42px;
+    padding: 0 21px;
     display: flex;
     flex-direction: column;
 
@@ -27,11 +23,13 @@
       font-family: $global-font-family;
       font-size: 40px;
       font-weight: 400;
+      line-height: 47px;
       letter-spacing: 2.6700000762939453px;
     }
 
     .typeNingredients {
       .type-logo {
+        margin: 8px 0;
         width: 40px;
         height: 31px;
       }
@@ -41,6 +39,7 @@
         font-weight: 200;
         letter-spacing: 1.9700000286102295px;
         text-align: center;
+        line-height: 30px;
       }
     }
 
@@ -62,7 +61,7 @@
       letter-spacing: 1.9700000286102295px;
       text-align: center;
       padding-top: 18px;
-      // padding-bottom: 12px;
+
       p {
         margin: 0;
         display: flex;

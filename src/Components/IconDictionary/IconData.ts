@@ -6,14 +6,14 @@ import vegan from "../../Assets/Icons/vegan.svg"
 export const Icons: Icon[] = [
   {
     image: spicy,
-    name: "spicy",
+    name: "Spicy",
   },
   {
     image: vegetarian,
-    name: "vegetarian",
+    name: "Vegetarian",
   },
   {
     image: vegan,
-    name: "vegan",
+    name: "Vegan",
   },
 ];

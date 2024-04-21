@@ -2,6 +2,7 @@ import React from "react";
 import close from "../../../Assets/Header/mobile/menu/close.svg";
 import "./MobileMenu.scss";
 import { Link } from "react-router-dom";
+import MenuBottom from "../../MenuBottom/MenuBottom.tsx"
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -24,19 +25,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           </li>
         </ul>
       </div>
-      <div className="menu-bottom">
-        <ul>
-          <li>
-            <Link to="/">Contact Us</Link>
-          </li>
-          <li>
-            <Link to="/">Term of Use</Link>
-          </li>
-          <li>
-            <Link to="/">Privacy Policy</Link>
-          </li>
-        </ul>
-      </div>
+      <MenuBottom />
     </div>
   );
 };

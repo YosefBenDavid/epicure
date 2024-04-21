@@ -2,7 +2,6 @@
 
 header {
   z-index: 999;
-  position: fixed;
   height: 64px;
   display: flex;
   width: 100%;
@@ -95,8 +94,9 @@ header {
   }
 
   @media (max-width: $mobile-pixel-display) {
-    position: relative;
+    position: fixed;
     height: 46px;
+    top: 0;
 
     .Header-mobile-logo-a {
       display: flex;
